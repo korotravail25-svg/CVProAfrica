@@ -393,8 +393,31 @@
       line-height: 1.5;
     }
     .cv-header-block {
+      display: grid;
+      grid-template-columns: 1fr 120px;
+      gap: 20px;
+      align-items: center;
       border-bottom: 3px solid #1a1a1a;
       padding-bottom: 14px; margin-bottom: 16px;
+    }
+    .cv-header-left { min-width: 0; }
+    .cv-photo {
+      width: 120px;
+      min-width: 120px;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 2px solid #e6e1d9;
+      background: #f4f0e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cv-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .cv-name {
       font-family: 'Playfair Display', serif;
@@ -435,6 +458,20 @@
       border: 1px solid #ddd; border-radius: 4px;
       padding: 4px 10px; font-size: 12px; font-weight: 500;
     }
+    .letter-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 16px 40px rgba(0,0,0,.12);
+      margin-top: 30px;
+      color: #1a1a1a;
+    }
+    .letter-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .letter-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; }
+    .letter-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .letter-output { white-space: pre-wrap; line-height: 1.75; font-size: 15px; color: #333; min-height: 220px; }
+    .btn-letter { background: #C9A84C; color: #111; }
+    .btn-letter:hover { background: #e1c77d; }
 
     /* ===== SIDEBAR ===== */
     .sidebar { display: flex; flex-direction: column; gap: 20px; }
@@ -523,6 +560,10 @@
       }
       .cv-body { gap: 14px !important; }
       .cv-section-title { margin-bottom: 8px !important; padding-bottom: 4px !important; }
+      #cv-paper img,
+      #cv-paper .photo-placeholder,
+      img { max-width: 100% !important; height: auto !important; }
+      .photo-placeholder { max-height: 140px !important; width: auto !important; }
     }
 
     /* ===== TOAST ===== */
@@ -555,8 +596,6 @@
   <a href="#" class="logo">CV<span>Pro</span> Africa</a>
   <ul class="nav-links">
     <li><a href="#generator">Créer un CV</a></li>
-    <li><a href="#features">Fonctionnalités</a></li>
-    <li><a href="confidentialite.html">Confidentialité</a></li>
     <li><a href="mentions-legales.html">Mentions légales</a></li>
     <li><a href="support.html">Support</a></li>
   </ul>
@@ -659,7 +698,12 @@
               </select>
             </div>
           </div>
-          <div class="form-row">
+          <div class="form-row cols-2">
+            <div class="form-group">
+              <label>Photo (optionnelle)</label>
+              <input type="file" id="photo" accept="image/*" onchange="handlePhotoUpload(event)" />
+              <div id="photo-preview" style="margin-top:10px;max-width:140px;border-radius:14px;overflow:hidden;border:1px solid rgba(201,168,76,.35);display:none;"></div>
+            </div>
             <div class="form-group">
               <label>Profil / Résumé (optionnel)</label>
               <textarea id="profil" placeholder="Ex : Ingénieur avec 5 ans d'expérience en développement web, passionné par les solutions innovantes en Afrique…"></textarea>
@@ -747,7 +791,9 @@
         <div class="result-header">
           <div class="result-actions">
             <button class="btn-action btn-new" onclick="resetForm()">↩ Nouveau CV</button>
+            <button class="btn-action btn-letter" onclick="generateLetterFromCV()">✉️ Générer lettre</button>
             <button class="btn-action btn-print" onclick="window.print()">🖨️ Imprimer / PDF</button>
+            <button class="btn-action btn-print" onclick="printWithoutHeaders()">🖨️ Imprimer sans en-tête/pied</button>
             <button class="btn-action btn-copy" onclick="copyCV()">📋 Copier le texte</button>
           </div>
         </div>
@@ -766,6 +812,18 @@
         </div>
 
         <div id="cv-paper"></div>
+
+        <div id="letter-preview" class="letter-card" style="display:none;">
+          <div class="letter-header">
+            <div class="letter-title">✉️ Lettre de motivation</div>
+            <div class="letter-actions">
+              <button class="btn-action btn-print" onclick="window.print()">🖨️ Imprimer / PDF</button>
+              <button class="btn-action btn-print" onclick="printWithoutHeaders()">🖨️ Imprimer sans en-tête/pied</button>
+              <button class="btn-action btn-copy" onclick="copyLetter()">📋 Copier la lettre</button>
+            </div>
+          </div>
+          <div class="letter-output" id="letter-output"></div>
+        </div>
 
         <div style="text-align:center;margin-top:20px;font-size:13px;color:var(--muted);">
           💡 Pour télécharger en PDF : cliquez sur "Imprimer / PDF" → choisissez "Enregistrer en PDF" dans les options d'impression.
@@ -887,6 +945,7 @@
   let currentStep = 1;
   let expCount = 0;
   let eduCount = 0;
+  let photoDataUrl = '';
 
   // Initialize default form sections on load
   window.addEventListener('DOMContentLoaded', () => {
@@ -991,12 +1050,36 @@
       }
     });
 
+    data.photo = photoDataUrl;
     return data;
   }
 
   function v(id) {
     const el = document.getElementById(id);
     return el ? el.value.trim() : '';
+  }
+
+  function handlePhotoUpload(event) {
+    const file = event.target.files[0];
+    const preview = document.getElementById('photo-preview');
+    if (!file) {
+      photoDataUrl = '';
+      preview.style.display = 'none';
+      preview.innerHTML = '';
+      return;
+    }
+    if (!file.type.startsWith('image/')) {
+      showToast('⚠️ Veuillez sélectionner une image valide.');
+      event.target.value = '';
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      photoDataUrl = reader.result;
+      preview.style.display = 'block';
+      preview.innerHTML = `<img src="${photoDataUrl}" alt="Aperçu photo" style="width:100%;height:100%;object-fit:cover;" />`;
+    };
+    reader.readAsDataURL(file);
   }
 
   // ======= BUILD PROMPT =======
@@ -1098,13 +1181,16 @@ Ne réponds QU'avec le JSON. Aucun texte avant ou après.`;
 
     let html = `
       <div class="cv-header-block">
-        <div class="cv-name">${prenom} ${nom}</div>
-        <div class="cv-title-pos">${raw.poste}</div>
-        <div class="cv-contacts">
-          ${raw.email ? `<span>✉️ ${raw.email}</span>` : ''}
-          ${raw.tel ? `<span>📞 ${raw.tel}</span>` : ''}
-          ${raw.ville ? `<span>📍 ${raw.ville}${raw.pays ? ', ' + raw.pays : ''}</span>` : ''}
+        <div class="cv-header-left">
+          <div class="cv-name">${prenom} ${nom}</div>
+          <div class="cv-title-pos">${raw.poste}</div>
+          <div class="cv-contacts">
+            ${raw.email ? `<span>✉️ ${raw.email}</span>` : ''}
+            ${raw.tel ? `<span>📞 ${raw.tel}</span>` : ''}
+            ${raw.ville ? `<span>📍 ${raw.ville}${raw.pays ? ', ' + raw.pays : ''}</span>` : ''}
+          </div>
         </div>
+        ${raw.photo ? `<div class="cv-photo"><img src="${raw.photo}" alt="Photo de ${prenom} ${nom}" /></div>` : ''}
       </div>
       <div class="cv-body">`;
 
@@ -1178,11 +1264,78 @@ Ne réponds QU'avec le JSON. Aucun texte avant ou après.`;
     document.getElementById('cv-result').classList.add('show');
     document.getElementById('cv-result').scrollIntoView({ behavior: 'smooth' });
     showToast('🎉 Votre CV a été généré avec succès !');
+    document.getElementById('letter-preview').style.display = 'none';
+    document.getElementById('letter-output').textContent = '';
+  }
+
+  async function generateLetterFromCV() {
+    const data = collectData();
+    if (!data.prenom || !data.nom || !data.poste || !data.email) {
+      showToast('⚠️ Remplissez les champs obligatoires du CV avant de générer la lettre.');
+      goTo(1);
+      return;
+    }
+
+    document.getElementById('loading').classList.add('show');
+    document.getElementById('btn-gen').disabled = true;
+    try {
+      const prompt = buildLetterPrompt(data);
+      const response = await fetch('/api/generate', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ prompt })
+      });
+      if (!response.ok) {
+        const err = await response.json();
+        throw new Error(err.error || 'Erreur API');
+      }
+      const result = await response.json();
+      let text = result.text || '';
+      text = text.replace(/```(?:json)?\n?/g, '').trim();
+      renderLetter(text);
+    } catch (err) {
+      console.error(err);
+      showToast('❌ Erreur génération lettre. Vérifiez votre clé API.');
+    } finally {
+      document.getElementById('loading').classList.remove('show');
+      document.getElementById('btn-gen').disabled = false;
+    }
+  }
+
+  function buildLetterPrompt(data) {
+    return `Tu es un expert en rédaction de lettres de motivation pour le marché de l'emploi africain francophone.
+
+Rédige une lettre de motivation professionnelle en français adaptée au poste et à l'entreprise, en utilisant les informations suivantes :
+- Nom complet : ${data.prenom} ${data.nom}
+- Poste visé : ${data.poste}
+- Entreprise ciblée : non précisée
+- Ville : ${data.ville || 'non précisée'}
+- Pays : ${data.pays || 'non précisé'}
+- Profil : ${data.profil || 'non renseigné'}
+- Compétences : ${data.competences || 'non renseignées'}
+- Langues : ${data.langues || 'non renseignées'}
+- Intérêts : ${data.interets || 'non renseignés'}
+- Expériences : ${data.experiences.length ? data.experiences.map(e => `${e.poste} chez ${e.entreprise} (${e.dates})`).join('; ') : 'non renseignées'}
+
+Instructions :
+1. Commence par une formule d'appel neutre.
+2. Présente brièvement le profil et les compétences.
+3. Valorise l'expérience la plus pertinente.
+4. Explique pourquoi le candidat souhaite rejoindre l'entreprise.
+5. Termine sur une phrase positive invitant à un entretien.
+6. Réponds uniquement par le texte de la lettre, sans balises HTML ni sections supplémentaires.`;
+  }
+
+  function renderLetter(text) {
+    document.getElementById('letter-output').textContent = text;
+    document.getElementById('letter-preview').style.display = 'block';
+    document.getElementById('letter-preview').scrollIntoView({ behavior: 'smooth' });
+    showToast('✍️ Lettre de motivation générée avec succès !');
   }
 
   // ======= RESET =======
   function resetForm() {
     document.getElementById('cv-result').classList.remove('show');
+    document.getElementById('letter-preview').style.display = 'none';
+    document.getElementById('letter-output').textContent = '';
     document.getElementById('cv-generator-form').style.display = 'block';
     goTo(1);
     document.getElementById('cv-generator-form').scrollIntoView({ behavior: 'smooth' });
@@ -1196,6 +1349,24 @@ Ne réponds QU'avec le JSON. Aucun texte avant ou après.`;
     }).catch(() => {
       showToast('❌ Copie non supportée sur ce navigateur');
     });
+  }
+
+  function copyLetter() {
+    const text = document.getElementById('letter-output').textContent;
+    if (!text) {
+      showToast('❌ Aucune lettre à copier.');
+      return;
+    }
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('✅ Lettre copiée !');
+    }).catch(() => {
+      showToast('❌ Copie non supportée sur ce navigateur');
+    });
+  }
+
+  function printWithoutHeaders() {
+    showToast("ℹ️ Dans la fenêtre d'impression, désactivez les en-têtes et pieds de page.");
+    window.print();
   }
 
   // ======= TOAST =======
