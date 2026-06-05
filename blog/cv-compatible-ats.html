@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV compatible ATS : comment l'optimiser pour passer les filtres automatiques | CVProAfrica</title>
+  <meta name="description" content="75% des CV sont filtrés avant d'atteindre un recruteur humain. Découvrez comment rendre votre CV compatible ATS et maximiser vos chances d'être sélectionné."/>
+  <meta name="keywords" content="cv compatible ats, optimiser cv ats, logiciel ats cv, cv filtres recruteurs, cv mots-clés emploi"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://cvproafrica.com/blog/cv-compatible-ats.html"/>
+  <meta property="og:title" content="CV compatible ATS : comment l'optimiser pour passer les filtres automatiques"/>
+  <meta property="og:description" content="75% des CV sont filtrés avant d'atteindre un recruteur humain. Voici comment l'éviter."/>
+  <meta property="og:url" content="https://cvproafrica.com/blog/cv-compatible-ats.html"/>
+  <meta property="og:type" content="article"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "CV compatible ATS : comment l'optimiser pour passer les filtres automatiques",
+    "description": "75% des CV sont filtrés avant d'atteindre un recruteur humain. Découvrez comment rendre votre CV compatible ATS.",
+    "author": { "@type": "Organization", "name": "CVProAfrica" },
+    "publisher": { "@type": "Organization", "name": "CVProAfrica", "url": "https://cvproafrica.com" },
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-06-04",
+    "url": "https://cvproafrica.com/blog/cv-compatible-ats.html",
+    "inLanguage": "fr"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce qu'un ATS ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Un ATS (Applicant Tracking System) est un logiciel utilisé par les entreprises pour trier automatiquement les CV reçus. Il analyse les mots-clés, la mise en page et la structure avant qu'un humain ne lise votre candidature." }
+      },
+      {
+        "@type": "Question",
+        "name": "Les entreprises africaines utilisent-elles des ATS ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui, de plus en plus. Les grandes entreprises comme MTN, Orange CI, Ecobank, Nestlé CI, Bolloré, et toutes les ONG internationales utilisent des ATS. Dès qu'une entreprise reçoit plus de 50 candidatures par offre, elle utilise généralement un logiciel de tri." }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment savoir si mon CV est compatible ATS ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Copiez-collez votre CV dans un fichier texte brut (Notepad). Si le contenu est lisible et structuré, votre CV est probablement compatible ATS. Si tout s'affiche en désordre ou si des sections disparaissent, votre mise en page n'est pas lisible par un logiciel." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:      #1a1a18;
+      --ink-2:    #4a4a44;
+      --ink-3:    #8a8a80;
+      --cream:    #faf8f3;
+      --cream-2:  #f2efe6;
+      --gold:     #c89a3a;
+      --green:    #2d6a4f;
+      --green-lt: #d8ede3;
+      --coral:    #c0442a;
+      --coral-lt: #fae8e3;
+      --blue:     #2d4da0;
+      --blue-lt:  #e8eeff;
+      --purple:   #5c3aa0;
+      --purple-lt:#f0ebff;
+      --amber-lt: #fff8e8;
+      --border:   #e4e0d4;
+      --radius:   10px;
+      --content:  680px;
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); line-height: 1.7; }
+
+    /* NAV */
+    nav { background: var(--ink); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links a { color: rgba(255,255,255,.6); font-size: .82rem; text-decoration: none; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { background: var(--gold); color: var(--ink); font-size: .8rem; font-weight: 600; padding: 8px 18px; border-radius: 6px; text-decoration: none; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    /* HERO — bleu/tech pour l'article ATS */
+    .article-hero { background: linear-gradient(135deg, #1a2240 0%, #2d4da0 100%); padding: 3.5rem 2rem 3rem; position: relative; overflow: hidden; }
+    .article-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,.03) 40px, rgba(255,255,255,.03) 41px);
+    }
+    .hero-inner { max-width: var(--content); margin: 0 auto; position: relative; }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; margin-bottom: 1.2rem; flex-wrap: wrap; }
+    .breadcrumb a { color: rgba(255,255,255,.5); font-size: .75rem; text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { color: rgba(255,255,255,.25); font-size: .75rem; }
+    .hero-tag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; background: rgba(255,255,255,.15); color: #fff; margin-bottom: 1rem; }
+    .article-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; color: #fff; line-height: 1.25; margin-bottom: .9rem; }
+    .hero-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .hero-meta span { font-size: .78rem; color: rgba(255,255,255,.55); }
+    .hero-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,.25); }
+
+    /* LAYOUT */
+    .article-layout { max-width: 1040px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 1fr 280px; gap: 3rem; align-items: start; }
+    .article-content { min-width: 0; }
+
+    /* INTRO */
+    .intro { font-size: 1.05rem; color: var(--ink-2); border-left: 3px solid var(--blue); padding-left: 1.2rem; margin-bottom: 2rem; line-height: 1.7; }
+
+    /* STAT BANNER */
+    .stat-banner { background: var(--ink); border-radius: var(--radius); padding: 1.4rem 1.8rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .stat-item { text-align: center; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .stat-label { font-size: .72rem; color: rgba(255,255,255,.5); margin-top: .2rem; }
+    .stat-divider { width: 1px; height: 50px; background: rgba(255,255,255,.1); }
+    .stat-text { font-size: .85rem; color: rgba(255,255,255,.65); line-height: 1.6; flex: 1; min-width: 180px; }
+
+    /* TITRES */
+    .article-content h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--ink); margin: 2.8rem 0 .9rem; padding-top: .5rem; border-top: 1px solid var(--border); }
+    .article-content h3 { font-size: 1.02rem; font-weight: 600; color: var(--ink); margin: 1.6rem 0 .5rem; }
+    .article-content p { font-size: .95rem; color: var(--ink-2); margin-bottom: 1rem; }
+    .article-content ul, .article-content ol { padding-left: 1.4rem; margin-bottom: 1rem; }
+    .article-content li { font-size: .92rem; color: var(--ink-2); margin-bottom: .35rem; }
+    .article-content strong { color: var(--ink); font-weight: 600; }
+
+    /* BOÎTES ASTUCES */
+    .tip-box { border-radius: var(--radius); padding: 1rem 1.2rem; margin: 1rem 0; font-size: .88rem; line-height: 1.6; }
+    .tip-box strong { display: block; margin-bottom: .3rem; font-size: .75rem; letter-spacing: .05em; text-transform: uppercase; }
+    .tip-info   { background: var(--blue-lt);   color: var(--blue);   border-left: 3px solid var(--blue); }
+    .tip-warn   { background: var(--amber-lt);  color: #7a5a00;       border-left: 3px solid var(--gold); }
+    .tip-good   { background: var(--green-lt);  color: var(--green);  border-left: 3px solid var(--green); }
+    .tip-purple { background: var(--purple-lt); color: var(--purple); border-left: 3px solid var(--purple); }
+
+    /* CTA INLINE */
+    .cta-inline { background: var(--green); border-radius: var(--radius); padding: 1.2rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
+    .cta-inline p { color: #fff; font-size: .88rem; font-weight: 500; margin: 0; }
+    .cta-inline p span { display: block; font-size: .78rem; color: rgba(255,255,255,.7); font-weight: 400; }
+    .cta-inline a { background: #fff; color: var(--green); font-weight: 600; font-size: .82rem; padding: 9px 20px; border-radius: 7px; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: opacity .2s; }
+    .cta-inline a:hover { opacity: .88; }
+
+    /* SOMMAIRE */
+    .toc { background: var(--cream-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; }
+    .toc-title { font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: .8rem; }
+    .toc ol { padding-left: 1.1rem; }
+    .toc li { margin-bottom: .3rem; }
+    .toc a { font-size: .85rem; color: var(--blue); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* SCHÉMA ATS — comment ça marche */
+    .ats-flow { display: flex; align-items: center; gap: 0; margin: 1.5rem 0; flex-wrap: wrap; justify-content: center; }
+    .ats-step { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: .8rem 1rem; text-align: center; min-width: 110px; flex: 1; }
+    .ats-step .step-icon { font-size: 1.6rem; margin-bottom: .3rem; }
+    .ats-step .step-label { font-size: .75rem; font-weight: 600; color: var(--ink); }
+    .ats-step .step-sub { font-size: .68rem; color: var(--ink-3); }
+    .ats-arrow { font-size: 1.2rem; color: var(--ink-3); padding: 0 .4rem; flex-shrink: 0; }
+    .ats-step.rejected { background: var(--coral-lt); border-color: rgba(192,68,42,.2); }
+    .ats-step.rejected .step-label { color: var(--coral); }
+    .ats-step.passed { background: var(--green-lt); border-color: rgba(45,106,79,.2); }
+    .ats-step.passed .step-label { color: var(--green); }
+
+    /* BEFORE/AFTER */
+    .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin: 1rem 0; }
+    .ba-box { border-radius: 7px; padding: .85rem 1rem; }
+    .ba-bad  { background: var(--coral-lt); border: 1px solid rgba(192,68,42,.15); }
+    .ba-good { background: var(--green-lt); border: 1px solid rgba(45,106,79,.15); }
+    .ba-label { font-size: .68rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .4rem; }
+    .ba-bad  .ba-label { color: var(--coral); }
+    .ba-good .ba-label { color: var(--green); }
+    .ba-box p { font-size: .82rem; margin: 0; color: var(--ink-2); }
+
+    /* RÈGLES ATS — liste visuelle */
+    .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin: 1.2rem 0; }
+    .rule-card { border-radius: 8px; padding: .9rem 1rem; border: 1px solid; }
+    .rule-ok   { background: var(--green-lt); border-color: rgba(45,106,79,.2); }
+    .rule-bad  { background: var(--coral-lt); border-color: rgba(192,68,42,.15); }
+    .rule-card .rule-icon { font-size: 1.1rem; margin-bottom: .3rem; }
+    .rule-card .rule-title { font-size: .82rem; font-weight: 600; margin-bottom: .2rem; }
+    .rule-ok  .rule-title { color: var(--green); }
+    .rule-bad .rule-title { color: var(--coral); }
+    .rule-card p { font-size: .78rem; color: var(--ink-2); margin: 0; line-height: 1.5; }
+
+    /* MOTS-CLÉS TABLEAU */
+    .kw-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .85rem; }
+    .kw-table th { background: var(--blue); color: #fff; text-align: left; padding: 9px 12px; font-weight: 500; font-size: .78rem; }
+    .kw-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); color: var(--ink-2); vertical-align: top; }
+    .kw-table tr:last-child td { border-bottom: none; }
+    .kw-table tr:nth-child(even) td { background: var(--cream-2); }
+    .kw-tag { display: inline-block; background: var(--blue-lt); color: var(--blue); font-size: .72rem; font-weight: 500; padding: 2px 8px; border-radius: 4px; margin: 2px; }
+
+    /* TEST RAPIDE */
+    .test-box { background: var(--ink); border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; }
+    .test-box h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--gold); margin-bottom: .8rem; }
+    .test-steps { counter-reset: step; list-style: none; padding: 0; }
+    .test-steps li { counter-increment: step; display: flex; align-items: flex-start; gap: .8rem; padding: .55rem 0; border-bottom: 1px solid rgba(255,255,255,.07); font-size: .85rem; color: rgba(255,255,255,.75); }
+    .test-steps li:last-child { border-bottom: none; }
+    .test-steps li::before { content: counter(step); min-width: 22px; height: 22px; border-radius: 50%; background: rgba(200,154,58,.25); color: var(--gold); font-size: .75rem; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+    /* FAQ */
+    .faq { margin: 1rem 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: .6rem; overflow: hidden; }
+    .faq-q { padding: 1rem 1.1rem; font-size: .92rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fff; gap: .5rem; list-style: none; color: var(--ink); }
+    .faq-q::after { content: '+'; font-size: 1.2rem; color: var(--gold); flex-shrink: 0; }
+    details[open] .faq-q::after { content: '−'; }
+    .faq-a { padding: 0 1.1rem 1rem; font-size: .88rem; color: var(--ink-2); background: #fff; line-height: 1.65; }
+
+    /* CTA FINAL */
+    .cta-final { background: var(--ink); border-radius: var(--radius); padding: 2.2rem; text-align: center; margin: 3rem 0 1rem; position: relative; overflow: hidden; }
+    .cta-final::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(200,154,58,.04) 20px, rgba(200,154,58,.04) 21px); }
+    .cta-final h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #fff; margin-bottom: .5rem; position: relative; }
+    .cta-final p { color: rgba(255,255,255,.6); font-size: .87rem; margin-bottom: 1.2rem; position: relative; }
+    .cta-final a { display: inline-block; background: var(--gold); color: var(--ink); font-weight: 600; font-size: .88rem; padding: 12px 28px; border-radius: 7px; text-decoration: none; position: relative; transition: opacity .2s; }
+    .cta-final a:hover { opacity: .88; }
+
+    /* SIDEBAR */
+    .sidebar { position: sticky; top: 80px; }
+    .sidebar-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; margin-bottom: 1.2rem; }
+    .sidebar-card h4 { font-family: 'Playfair Display', serif; font-size: .95rem; font-weight: 700; margin-bottom: .9rem; color: var(--ink); }
+    .sidebar-cta { background: var(--green); border-radius: var(--radius); padding: 1.3rem; text-align: center; }
+    .sidebar-cta p { color: rgba(255,255,255,.8); font-size: .8rem; margin-bottom: .9rem; }
+    .sidebar-cta a { display: block; background: #fff; color: var(--green); font-weight: 600; font-size: .83rem; padding: 9px; border-radius: 6px; text-decoration: none; transition: opacity .2s; }
+    .sidebar-cta a:hover { opacity: .88; }
+    .related-list { list-style: none; padding: 0; }
+    .related-list li { margin-bottom: .5rem; border-bottom: 1px solid var(--border); padding-bottom: .5rem; }
+    .related-list li:last-child { border-bottom: none; margin-bottom: 0; }
+    .related-list a { font-size: .82rem; color: var(--green); text-decoration: none; line-height: 1.4; display: block; }
+    .related-list a:hover { text-decoration: underline; }
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { font-size: .82rem; color: var(--ink-2); padding: .28rem 0; display: flex; align-items: flex-start; gap: .5rem; line-height: 1.45; }
+    .checklist li::before { content: '✓'; color: var(--green); font-weight: 600; flex-shrink: 0; }
+
+    footer { background: var(--ink); color: rgba(255,255,255,.45); text-align: center; padding: 2rem; font-size: .76rem; margin-top: 2rem; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 760px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; margin-top: 2rem; }
+      .before-after, .rules-grid { grid-template-columns: 1fr; }
+      .ats-flow { flex-direction: column; align-items: stretch; }
+      .ats-arrow { transform: rotate(90deg); text-align: center; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 480px) {
+      .article-layout { padding: 1.5rem 1rem; }
+      .cta-inline { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">CV<span>Pro</span>Africa</a>
+  <div class="nav-links">
+    <a href="index.html">Blog</a>
+    <a href="../confidentialite.html">Confidentialité</a>
+    <a href="../support.html">Support</a>
+  </div>
+  <a href="../index.html" class="nav-cta">Créer mon CV ↗</a>
+</nav>
+
+<header class="article-hero">
+  <div class="hero-inner">
+    <nav class="breadcrumb" aria-label="Fil d'ariane">
+      <a href="../index.html">Accueil</a>
+      <span>›</span>
+      <a href="index.html">Blog</a>
+      <span>›</span>
+      <span style="color:rgba(255,255,255,.8)">CV & ATS</span>
+    </nav>
+    <div class="hero-tag">🎯 Guide technique</div>
+    <h1>CV compatible ATS : comment l'optimiser pour passer les filtres automatiques</h1>
+    <div class="hero-meta">
+      <span>Par CVProAfrica</span>
+      <div class="dot"></div>
+      <span>Juin 2025</span>
+      <div class="dot"></div>
+      <span>6 min de lecture</span>
+      <div class="dot"></div>
+      <span>Tous niveaux</span>
+    </div>
+  </div>
+</header>
+
+<div class="article-layout">
+
+  <article class="article-content">
+
+    <p class="intro">
+      Saviez-vous que <strong>75% des CV ne sont jamais lus par un être humain</strong> ? Ils sont filtrés et rejetés automatiquement par un logiciel avant d'atteindre le bureau d'un recruteur. Ce logiciel s'appelle un ATS. Dans ce guide, vous allez comprendre exactement comment il fonctionne et comment optimiser votre CV pour le traverser sans encombre.
+    </p>
+
+    <div class="stat-banner" role="note">
+      <div class="stat-item">
+        <div class="stat-num">75%</div>
+        <div class="stat-label">des CV filtrés par ATS</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-num">98%</div>
+        <div class="stat-label">des grandes entreprises utilisent un ATS</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-num">6s</div>
+        <div class="stat-label">si votre CV passe le filtre</div>
+      </div>
+      <div class="stat-divider"></div>
+      <p class="stat-text">MTN, Orange CI, Ecobank, Nestlé CI, PNUD, UNICEF — toutes ces organisations utilisent un ATS. Votre CV doit le convaincre avant de convaincre un humain.</p>
+    </div>
+
+    <nav class="toc" aria-label="Sommaire">
+      <div class="toc-title">Sommaire</div>
+      <ol>
+        <li><a href="#ats-c-est-quoi">Qu'est-ce qu'un ATS exactement ?</a></li>
+        <li><a href="#comment-ca-marche">Comment un ATS lit votre CV</a></li>
+        <li><a href="#regles-mise-en-page">Les règles de mise en page ATS</a></li>
+        <li><a href="#mots-cles">L'arme secrète : les mots-clés</a></li>
+        <li><a href="#structure">La structure idéale pour un CV ATS</a></li>
+        <li><a href="#test">Tester votre CV avant d'envoyer</a></li>
+        <li><a href="#ia">Comment l'IA vous crée un CV ATS-ready</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- Section 1 -->
+    <h2 id="ats-c-est-quoi">1. Qu'est-ce qu'un ATS exactement ?</h2>
+    <p>
+      Un <strong>ATS (Applicant Tracking System)</strong> — ou système de suivi des candidatures — est un logiciel utilisé par les entreprises pour gérer les milliers de CV qu'elles reçoivent. Son rôle principal : lire, analyser et classer les CV automatiquement avant qu'un recruteur humain ne pose les yeux dessus.
+    </p>
+    <p>
+      Concrètement, l'ATS scanne votre CV à la recherche de mots-clés correspondant à l'offre d'emploi. Si votre score est trop bas, votre CV est rejeté automatiquement — même si vous êtes le candidat idéal.
+    </p>
+
+    <div class="ats-flow" role="img" aria-label="Parcours d'un CV dans un ATS">
+      <div class="ats-step">
+        <div class="step-icon">📨</div>
+        <div class="step-label">Candidature envoyée</div>
+        <div class="step-sub">Vous soumettez votre CV</div>
+      </div>
+      <div class="ats-arrow">→</div>
+      <div class="ats-step">
+        <div class="step-icon">🤖</div>
+        <div class="step-label">Lecture par l'ATS</div>
+        <div class="step-sub">Analyse mots-clés & structure</div>
+      </div>
+      <div class="ats-arrow">→</div>
+      <div class="ats-step rejected">
+        <div class="step-icon">🗑️</div>
+        <div class="step-label">Score insuffisant</div>
+        <div class="step-sub">Rejeté automatiquement</div>
+      </div>
+      <div class="ats-arrow" style="color:var(--green-lt)">→</div>
+      <div class="ats-step passed">
+        <div class="step-icon">✅</div>
+        <div class="step-label">Score suffisant</div>
+        <div class="step-sub">Transmis au recruteur</div>
+      </div>
+    </div>
+
+    <div class="tip-box tip-info">
+      <strong>En Afrique francophone</strong>
+      MTN CI, Orange CI, Ecobank, SGBCI, Nestlé CI, Bolloré, PNUD, UNICEF, et toutes les multinationales utilisent un ATS. Les startups et PME locales rarement — mais dès qu'une entreprise reçoit plus de 50 candidatures par offre, elle utilise généralement un outil de tri.
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="comment-ca-marche">2. Comment un ATS lit votre CV</h2>
+    <p>Un ATS ne "voit" pas votre CV comme un humain. Il le lit comme un robot — caractère par caractère, ligne par ligne. Il cherche :</p>
+    <ul>
+      <li><strong>Des mots-clés</strong> tirés de l'offre d'emploi (compétences, titres de poste, diplômes, logiciels)</li>
+      <li><strong>Une structure reconnaissable</strong> — sections clairement nommées : "Expériences", "Formation", "Compétences"</li>
+      <li><strong>Du texte brut lisible</strong> — les tableaux, colonnes complexes, icônes et graphiques le perturbent</li>
+      <li><strong>Un format compatible</strong> — Word (.docx) ou PDF texte (pas PDF image)</li>
+    </ul>
+    <div class="tip-box tip-warn">
+      <strong>Attention aux CV trop design</strong>
+      Un CV très graphique avec des colonnes, des barres de compétences visuelles ou des icônes est magnifique pour un humain, mais illisible pour un ATS. Ces éléments brouillent l'analyse et font chuter votre score.
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="regles-mise-en-page">3. Les règles de mise en page ATS</h2>
+    <p>Ces règles sont non négociables si vous ciblez des entreprises qui utilisent un ATS :</p>
+
+    <div class="rules-grid">
+      <div class="rule-card rule-ok">
+        <div class="rule-icon">✅</div>
+        <div class="rule-title">Police simple (Arial, Calibri, Times)</div>
+        <p>Les polices standard sont toujours bien interprétées par les ATS.</p>
+      </div>
+      <div class="rule-card rule-bad">
+        <div class="rule-icon">❌</div>
+        <div class="rule-title">Polices décoratives ou manuscrites</div>
+        <p>Illisibles pour un robot. Les caractères spéciaux sont ignorés ou mal interprétés.</p>
+      </div>
+      <div class="rule-card rule-ok">
+        <div class="rule-icon">✅</div>
+        <div class="rule-title">Mise en page une colonne</div>
+        <p>Structure linéaire que tout ATS peut lire sans confusion.</p>
+      </div>
+      <div class="rule-card rule-bad">
+        <div class="rule-icon">❌</div>
+        <div class="rule-title">Mise en page deux colonnes</div>
+        <p>L'ATS lit souvent les colonnes dans le mauvais ordre, mélangeant les informations.</p>
+      </div>
+      <div class="rule-card rule-ok">
+        <div class="rule-icon">✅</div>
+        <div class="rule-title">Titres de sections standards</div>
+        <p>"Expériences professionnelles", "Formation", "Compétences" — reconnus par tous les ATS.</p>
+      </div>
+      <div class="rule-card rule-bad">
+        <div class="rule-icon">❌</div>
+        <div class="rule-title">Titres créatifs ou originaux</div>
+        <p>"Mon parcours", "Ce que je sais faire" — l'ATS ne reconnaît pas ces sections.</p>
+      </div>
+      <div class="rule-card rule-ok">
+        <div class="rule-icon">✅</div>
+        <div class="rule-title">PDF texte ou Word (.docx)</div>
+        <p>Formats standards entièrement lisibles par tous les logiciels ATS.</p>
+      </div>
+      <div class="rule-card rule-bad">
+        <div class="rule-icon">❌</div>
+        <div class="rule-title">PDF image (scan) ou JPEG</div>
+        <p>L'ATS voit une image — il ne peut extraire aucun texte. Score = 0.</p>
+      </div>
+      <div class="rule-card rule-ok">
+        <div class="rule-icon">✅</div>
+        <div class="rule-title">Dates au format clair</div>
+        <p>"Janvier 2022 – Mars 2024" ou "01/2022 – 03/2024" sont bien interprétées.</p>
+      </div>
+      <div class="rule-card rule-bad">
+        <div class="rule-icon">❌</div>
+        <div class="rule-title">Tableaux et graphiques visuels</div>
+        <p>Barres de compétences, jauges, étoiles — ignorées ou mal lues par l'ATS.</p>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <h2 id="mots-cles">4. L'arme secrète : les mots-clés</h2>
+    <p>
+      L'ATS compare votre CV avec la fiche de poste mot par mot. Plus votre CV contient les mêmes termes que l'offre, plus votre score est élevé. C'est aussi simple que ça.
+    </p>
+
+    <h3>Comment identifier les bons mots-clés</h3>
+    <ul>
+      <li>Lisez attentivement l'offre d'emploi et <strong>surlignez tous les mots techniques et compétences demandés</strong></li>
+      <li>Notez les <strong>intitulés de poste</strong> utilisés (ex. "Chargé de projet" et non "Chef de projet" si c'est ce qui est écrit)</li>
+      <li>Relevez les <strong>logiciels et outils mentionnés</strong> (SAP, SAGE, Excel, Salesforce…)</li>
+      <li>Identifiez les <strong>certifications ou diplômes spécifiques</strong> demandés</li>
+    </ul>
+
+    <h3>Exemples de mots-clés par secteur en Côte d'Ivoire</h3>
+    <table class="kw-table">
+      <thead>
+        <tr><th>Secteur</th><th>Mots-clés à inclure dans votre CV</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Finance / Banque</strong></td>
+          <td>
+            <span class="kw-tag">OHADA</span>
+            <span class="kw-tag">SAGE Comptabilité</span>
+            <span class="kw-tag">audit interne</span>
+            <span class="kw-tag">trésorerie</span>
+            <span class="kw-tag">reporting financier</span>
+            <span class="kw-tag">contrôle de gestion</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Télécoms / Tech</strong></td>
+          <td>
+            <span class="kw-tag">gestion de projet</span>
+            <span class="kw-tag">agile</span>
+            <span class="kw-tag">KPI</span>
+            <span class="kw-tag">CRM</span>
+            <span class="kw-tag">satisfaction client</span>
+            <span class="kw-tag">SLA</span>
+            <span class="kw-tag">B2B</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>ONG / Développement</strong></td>
+          <td>
+            <span class="kw-tag">suivi-évaluation</span>
+            <span class="kw-tag">reporting bailleur</span>
+            <span class="kw-tag">cadre logique</span>
+            <span class="kw-tag">coordination terrain</span>
+            <span class="kw-tag">renforcement de capacités</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Marketing / Communication</strong></td>
+          <td>
+            <span class="kw-tag">stratégie digitale</span>
+            <span class="kw-tag">community management</span>
+            <span class="kw-tag">Google Ads</span>
+            <span class="kw-tag">SEO</span>
+            <span class="kw-tag">taux de conversion</span>
+            <span class="kw-tag">création de contenu</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>RH / Administration</strong></td>
+          <td>
+            <span class="kw-tag">SIRH</span>
+            <span class="kw-tag">recrutement</span>
+            <span class="kw-tag">gestion de la paie</span>
+            <span class="kw-tag">droit du travail</span>
+            <span class="kw-tag">onboarding</span>
+            <span class="kw-tag">GPEC</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tip-box tip-purple">
+      <strong>Astuce pro</strong>
+      Ne "bourrez" pas votre CV de mots-clés sans lien avec votre profil réel. Les ATS modernes détectent le keyword stuffing et le pénalisent. Intégrez les mots-clés naturellement dans vos descriptions de missions.
+    </div>
+
+    <!-- Section 5 -->
+    <h2 id="structure">5. La structure idéale pour un CV ATS</h2>
+    <p>Voici exactement comment nommer vos sections pour qu'un ATS les reconnaisse :</p>
+
+    <div class="before-after">
+      <div class="ba-box ba-bad">
+        <div class="ba-label">❌ Titres que l'ATS ne reconnaît pas</div>
+        <p>
+          "Mon parcours"<br/>
+          "Ce que je sais faire"<br/>
+          "Ma formation"<br/>
+          "Qui suis-je ?"<br/>
+          "Mes atouts"
+        </p>
+      </div>
+      <div class="ba-box ba-good">
+        <div class="ba-label">✓ Titres reconnus par tous les ATS</div>
+        <p>
+          "Expériences professionnelles"<br/>
+          "Compétences"<br/>
+          "Formation"<br/>
+          "Profil professionnel"<br/>
+          "Certifications"
+        </p>
+      </div>
+    </div>
+
+    <h3>Ordre des sections recommandé</h3>
+    <ol>
+      <li><strong>Coordonnées</strong> — Nom, email, téléphone, ville</li>
+      <li><strong>Profil professionnel</strong> — 2–3 lignes résumant votre valeur ajoutée</li>
+      <li><strong>Expériences professionnelles</strong> — Du plus récent au plus ancien, avec mots-clés du secteur</li>
+      <li><strong>Formation</strong> — Diplômes avec établissement et année</li>
+      <li><strong>Compétences</strong> — Liste claire, sans barres graphiques</li>
+      <li><strong>Certifications</strong> — Si applicable</li>
+      <li><strong>Langues</strong> — Niveau précis (courant, bilingue, notions)</li>
+    </ol>
+
+    <!-- Section 6 -->
+    <h2 id="test">6. Tester votre CV avant d'envoyer</h2>
+    <p>Avant d'envoyer votre CV pour une offre importante, faites ce test rapide :</p>
+
+    <div class="test-box">
+      <h3>Test ATS en 5 étapes (gratuit)</h3>
+      <ol class="test-steps">
+        <li>Ouvrez votre CV PDF et sélectionnez tout le texte (Ctrl+A)</li>
+        <li>Copiez-collez dans Notepad (Bloc-notes) ou un éditeur de texte brut</li>
+        <li>Vérifiez que tout le contenu est lisible et dans le bon ordre</li>
+        <li>Comparez les mots-clés de votre CV avec ceux de l'offre d'emploi</li>
+        <li>Si des sections manquent ou si le texte est illisible → votre CV n'est pas ATS-compatible</li>
+      </ol>
+    </div>
+
+    <div class="cta-inline">
+      <p>Créez un CV ATS-ready en 5 minutes
+        <span>Notre IA génère automatiquement une structure optimisée pour les ATS</span>
+      </p>
+      <a href="../index.html">Créer mon CV →</a>
+    </div>
+
+    <!-- Section 7 -->
+    <h2 id="ia">7. Comment l'IA vous crée un CV ATS-ready</h2>
+    <p>
+      Optimiser manuellement son CV pour chaque offre d'emploi est fastidieux. C'est exactement ce pour quoi les générateurs de CV par IA ont été conçus.
+    </p>
+    <p>CVProAfrica génère automatiquement un CV qui :</p>
+    <ul>
+      <li>Utilise une <strong>mise en page une colonne</strong> lisible par 100% des ATS</li>
+      <li>Nomme les sections avec les <strong>titres standards reconnus</strong> par tous les logiciels</li>
+      <li>Intègre les <strong>mots-clés de votre secteur</strong> naturellement dans les descriptions</li>
+      <li>Exporte en <strong>PDF texte</strong> (jamais en image) compatible avec tous les ATS</li>
+      <li>Adapte le contenu à l'offre ciblée en quelques secondes</li>
+    </ul>
+
+    <div class="tip-box tip-good">
+      <strong>Résultat concret</strong>
+      Un CV généré par CVProAfrica est conçu pour passer les filtres ATS des grandes entreprises ivoiriennes et africaines tout en restant élégant et lisible pour le recruteur humain.
+    </div>
+
+    <!-- FAQ -->
+    <h2 id="faq">FAQ — Questions fréquentes</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary class="faq-q">Qu'est-ce qu'un ATS exactement ?</summary>
+        <div class="faq-a">Un ATS (Applicant Tracking System) est un logiciel utilisé par les entreprises pour trier automatiquement les CV reçus. Il analyse les mots-clés, la mise en page et la structure avant qu'un humain ne lise votre candidature. Des systèmes comme Workday, Taleo, Greenhouse ou SAP SuccessFactors sont utilisés par des milliers d'entreprises dans le monde, y compris en Afrique francophone.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Les entreprises africaines utilisent-elles des ATS ?</summary>
+        <div class="faq-a">Oui, de plus en plus. MTN, Orange CI, Ecobank, Nestlé CI, Bolloré, et toutes les ONG internationales (PNUD, UNICEF, Croix-Rouge) utilisent des ATS. Dès qu'une entreprise reçoit plus de 50 candidatures par offre, elle utilise généralement un outil de tri automatique. Les PME locales et startups utilisent moins souvent ces outils — un CV plus design peut alors fonctionner.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Comment savoir si mon CV est compatible ATS ?</summary>
+        <div class="faq-a">Copiez-collez l'intégralité de votre CV dans un fichier Notepad (Bloc-notes). Si le contenu est lisible, structuré et dans le bon ordre, votre CV est probablement compatible ATS. Si des sections disparaissent ou si le texte est mélangé, votre mise en page n'est pas lisible par un logiciel de tri.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Puis-je avoir un CV à la fois beau ET compatible ATS ?</summary>
+        <div class="faq-a">Oui, absolument. La clé est d'utiliser une mise en page sobre à une colonne, avec de belles typographies et des couleurs discrètes — sans colonnes, tableaux ou graphiques. Notre générateur CVProAfrica est précisément conçu pour produire des CV élégants et 100% ATS-compatibles.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Faut-il adapter son CV pour chaque offre d'emploi ?</summary>
+        <div class="faq-a">Idéalement oui, au minimum pour l'accroche et la section compétences. L'adaptation ne prend que 5 à 10 minutes et améliore significativement votre score ATS. Avec un générateur IA, vous pouvez régénérer facilement une version adaptée à chaque offre.</div>
+      </details>
+    </div>
+
+    <!-- CTA FINAL -->
+    <div class="cta-final">
+      <h3>Votre CV passe-t-il le filtre ATS ?</h3>
+      <p>Créez en 5 minutes un CV ATS-ready, élégant et adapté au marché africain — gratuitement avec CVProAfrica.</p>
+      <a href="../index.html">Créer mon CV ATS-ready →</a>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-cta">
+      <p>Créez un CV optimisé pour les ATS et les recruteurs</p>
+      <a href="../index.html">Créer mon CV gratuit →</a>
+    </div>
+
+    <div class="sidebar-card" style="margin-top:1.2rem">
+      <h4>Checklist ATS rapide</h4>
+      <ul class="checklist">
+        <li>Mise en page 1 colonne</li>
+        <li>Police standard (Arial, Calibri)</li>
+        <li>Titres de sections standards</li>
+        <li>Pas de tableaux ni graphiques</li>
+        <li>PDF texte (pas image)</li>
+        <li>Mots-clés de l'offre inclus</li>
+        <li>Dates au format clair</li>
+        <li>Test Notepad réussi</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h4>Articles liés</h4>
+      <ul class="related-list">
+        <li><a href="comment-faire-cv-cote-divoire.html">CV en Côte d'Ivoire : guide complet</a></li>
+        <li><a href="erreurs-cv-a-eviter.html">Les 7 erreurs qui font rejeter un CV</a></li>
+        <li><a href="cv-ia-comment-ca-marche.html">CV avec l'IA : comment ça marche ?</a></li>
+        <li><a href="cv-sans-experience.html">CV sans expérience : guide complet</a></li>
+        <li><a href="lettre-motivation-ia.html">Lettre de motivation par IA</a></li>
+      </ul>
+    </div>
+
+  </aside>
+
+</div>
+
+<footer>
+  <p>© 2025 CVProAfrica — <a href="../confidentialite.html">Confidentialité</a> · <a href="../mention.html">Mentions légales</a> · <a href="../support.html">Support</a> · <a href="index.html">Blog</a></p>
+</footer>
+
+</body>
+</html>

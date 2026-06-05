@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog CV — Conseils emploi & CV en Afrique | CVProAfrica</title>
+  <meta name="description" content="Guides pratiques pour rédiger un CV professionnel en Afrique francophone. Conseils emploi, modèles CV, lettres de motivation pour la Côte d'Ivoire, Sénégal, Cameroun."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://cvproafrica.com/blog/"/>
+  <meta property="og:title" content="Blog CV — Conseils emploi & CV en Afrique"/>
+  <meta property="og:description" content="Guides pratiques pour rédiger un CV professionnel en Afrique francophone."/>
+  <meta property="og:url" content="https://cvproafrica.com/blog/"/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #1a1a18;
+      --ink-2:     #4a4a44;
+      --ink-3:     #8a8a80;
+      --cream:     #faf8f3;
+      --cream-2:   #f2efe6;
+      --gold:      #c89a3a;
+      --gold-lt:   #f0d898;
+      --green:     #2d6a4f;
+      --green-lt:  #d8ede3;
+      --coral:     #c0442a;
+      --coral-lt:  #fae8e3;
+      --border:    #e4e0d4;
+      --radius:    10px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--ink);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--ink);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* HERO BLOG */
+    .hero {
+      background: var(--ink);
+      color: #fff;
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 60px,
+        rgba(200,154,58,.04) 60px,
+        rgba(200,154,58,.04) 61px
+      );
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(200,154,58,.4);
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 600px;
+      margin: 0 auto 1rem;
+    }
+    .hero p {
+      color: rgba(255,255,255,.65);
+      font-size: 1rem;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* FILTRES */
+    .filters-wrap {
+      background: var(--cream-2);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-right: 4px;
+    }
+    .filter-btn {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 0.78rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink-2);
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .filter-btn:hover { border-color: var(--gold); color: var(--ink); }
+    .filter-btn.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+    /* CONTAINER */
+    .container { max-width: 1080px; margin: 0 auto; padding: 3rem 2rem; }
+
+    /* ARTICLE FEATURED (1er article en grand) */
+    .featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 2.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow .2s;
+    }
+    .featured:hover { box-shadow: 0 6px 30px rgba(0,0,0,.08); }
+    .featured-visual {
+      background: var(--ink);
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .featured-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(200,154,58,.06) 20px,
+        rgba(200,154,58,.06) 21px
+      );
+    }
+    .feat-icon {
+      font-size: 5rem;
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+      filter: grayscale(0);
+    }
+    .featured-body { padding: 2rem 2rem 2rem; display: flex; flex-direction: column; justify-content: center; }
+    .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap; }
+    .tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+    .tag-local { background: var(--green-lt); color: var(--green); }
+    .tag-guide { background: #e8eeff; color: #2d4da0; }
+    .tag-profil { background: var(--coral-lt); color: var(--coral); }
+    .tag-ia { background: #f0ebff; color: #5c3aa0; }
+    .tag-conseils { background: var(--cream-2); color: var(--ink-2); border: 1px solid var(--border); }
+    .read-time { font-size: 0.75rem; color: var(--ink-3); }
+    .featured-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: .75rem;
+    }
+    .featured-body p { font-size: 0.9rem; color: var(--ink-2); line-height: 1.65; margin-bottom: 1.2rem; }
+    .read-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--green);
+      text-decoration: none;
+    }
+    .read-link::after { content: '→'; transition: transform .2s; }
+    .featured:hover .read-link::after { transform: translateX(4px); }
+
+    /* GRILLE ARTICLES */
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+      padding-bottom: .6rem;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; margin-bottom: 3rem; }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.07); transform: translateY(-2px); }
+    .card[style*="display:none"] { display: none !important; }
+
+    .card-top {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-top.bg-local  { background: var(--green-lt); }
+    .card-top.bg-guide  { background: #e8eeff; }
+    .card-top.bg-profil { background: var(--coral-lt); }
+    .card-top.bg-ia     { background: #f0ebff; }
+    .card-top.bg-conseils { background: var(--cream-2); }
+
+    .card-body { padding: 1rem 1.1rem 1.2rem; flex: 1; display: flex; flex-direction: column; }
+    .card-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin: .5rem 0 .45rem;
+    }
+    .card-body p { font-size: 0.82rem; color: var(--ink-2); line-height: 1.6; flex: 1; }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: .9rem;
+      padding-top: .7rem;
+      border-top: 1px solid var(--border);
+    }
+    .card-footer .read-time { font-size: 0.72rem; color: var(--ink-3); }
+    .card-arrow { font-size: 0.8rem; color: var(--gold); font-weight: 600; }
+
+    /* BANNIÈRE CTA */
+    .cta-banner {
+      background: var(--ink);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        90deg, transparent, transparent 40px,
+        rgba(200,154,58,.05) 40px, rgba(200,154,58,.05) 41px
+      );
+    }
+    .cta-banner h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: .5rem;
+      position: relative;
+    }
+    .cta-banner p { color: rgba(255,255,255,.6); font-size: .88rem; margin-bottom: 1.2rem; position: relative; }
+    .cta-banner a {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--ink);
+      font-weight: 600;
+      font-size: .85rem;
+      padding: 11px 26px;
+      border-radius: 7px;
+      text-decoration: none;
+      position: relative;
+      transition: opacity .2s;
+    }
+    .cta-banner a:hover { opacity: .88; }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.5);
+      text-align: center;
+      padding: 2rem;
+      font-size: .78rem;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      .featured { grid-template-columns: 1fr; }
+      .featured-visual { min-height: 160px; }
+      .hero { padding: 2.5rem 1.2rem 2rem; }
+      .container { padding: 2rem 1.2rem; }
+      .filters-wrap { padding: .75rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">CV<span>Pro</span>Africa</a>
+  <a href="../index.html" class="nav-cta">Créer mon CV ↗</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">Conseils & Guides</div>
+  <h1>Tout ce qu'il faut savoir pour décrocher un emploi en Afrique</h1>
+  <p>Guides pratiques, modèles de CV et conseils adaptés au marché ivoirien et africain francophone.</p>
+</section>
+
+<div class="filters-wrap">
+  <span class="filter-label">Filtrer :</span>
+  <button class="filter-btn active" onclick="filterArticles('tous', this)">Tous</button>
+  <button class="filter-btn" onclick="filterArticles('local', this)">Géolocalisé</button>
+  <button class="filter-btn" onclick="filterArticles('guide', this)">Guides</button>
+  <button class="filter-btn" onclick="filterArticles('profil', this)">Par profil</button>
+  <button class="filter-btn" onclick="filterArticles('ia', this)">IA & CV</button>
+  <button class="filter-btn" onclick="filterArticles('conseils', this)">Conseils</button>
+</div>
+
+<main class="container">
+
+  <!-- Article vedette -->
+  <a href="comment-faire-cv-cote-divoire.html" class="featured" data-cat="local">
+    <div class="featured-visual">
+      <span class="feat-icon">🇨🇮</span>
+    </div>
+    <div class="featured-body">
+      <div class="article-meta">
+        <span class="tag tag-local">Géolocalisé</span>
+        <span class="tag tag-guide">Guide complet</span>
+        <span class="read-time">8 min de lecture</span>
+      </div>
+      <h2>Comment faire un bon CV en Côte d'Ivoire en 2025</h2>
+      <p>Photo obligatoire, état civil, format PDF… Découvrez les règles spécifiques du CV ivoirien et les erreurs qui font rejeter les candidatures à Abidjan.</p>
+      <span class="read-link">Lire l'article</span>
+    </div>
+  </a>
+
+  <!-- Grille articles -->
+  <div class="section-title" id="articles-titre">Tous les articles</div>
+
+  <div class="grid" id="articles-grid">
+
+    <a href="cv-sans-experience.html" class="card" data-cat="profil">
+      <div class="card-top bg-profil">🎓</div>
+      <div class="card-body">
+        <div class="article-meta"><span class="tag tag-profil">Par profil</span><span class="read-time">6 min</span></div>
+        <h3>CV sans expérience : comment convaincre un recruteur en 2025</h3>
+        <p>Étudiant, jeune diplômé ou en reconversion — voici comment valoriser votre profil même sans expérience professionnelle.</p>
+        <div class="card-footer">
+          <span class="read-time">Débutants & étudiants</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="cv-ia-comment-ca-marche.html" class="card" data-cat="ia">
+      <div class="card-top bg-ia">🤖</div>
+      <div class="card-body">
+        <div class="article-meta"><span class="tag tag-ia">IA & CV</span><span class="read-time">5 min</span></div>
+        <h3>CV avec l'IA : comment ça marche vraiment ?</h3>
+        <p>L'intelligence artificielle peut générer votre CV en quelques minutes. Mais comment ça fonctionne, et est-ce vraiment efficace ?</p>
+        <div class="card-footer">
+          <span class="read-time">Technologie</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="erreurs-cv-a-eviter.html" class="card" data-cat="conseils">
+      <div class="card-top bg-conseils">⚠️</div>
+      <div class="card-body">
+        <div class="article-meta"><span class="tag tag-conseils">Conseils</span><span class="read-time">4 min</span></div>
+        <h3>Les 7 erreurs qui font rejeter un CV immédiatement</h3>
+        <p>Fautes d'orthographe, photo amateur, email peu professionnel… Ces erreurs éliminent votre candidature avant même l'entretien.</p>
+        <div class="card-footer">
+          <span class="read-time">Tous profils</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="cv-senegal.html" class="card" data-cat="local">
+      <div class="card-top bg-local">🇸🇳</div>
+      <div class="card-body">
+        <div class="article-meta"><span class="tag tag-local">Géolocalisé</span><span class="read-time">7 min</span></div>
+        <h3>Faire son CV au Sénégal : guide pour le marché de Dakar</h3>
+        <p>Les recruteurs sénégalais ont leurs propres attentes. Découvrez comment adapter votre CV pour le marché de l'emploi à Dakar.</p>
+        <div class="card-footer">
+          <span class="read-time">Sénégal</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="lettre-motivation-ia.html" class="card" data-cat="ia">
+      <div class="card-top bg-ia">✉️</div>
+      <div class="card-body">
+        <div class="article-meta"><span class="tag tag-ia">IA & CV</span><span class="read-time">5 min</span></div>
+        <h3>Lettre de motivation générée par IA : guide complet 2025</h3>
+        <p>Comment utiliser l'intelligence artificielle pour rédiger une lettre de motivation percutante, personnalisée et sans fautes.</p>
+        <div class="card-footer">
+          <span class="read-time">Tous profils</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="cv-compatible-ats.html" class="card" data-cat="guide">
+      <div class="card-top bg-guide">🎯</div>
+      <div class="card-body">
+        <div class="article-meta"><span class="tag tag-guide">Guide</span><span class="read-time">6 min</span></div>
+        <h3>CV compatible ATS : comment passer les filtres automatiques</h3>
+        <p>Les grandes entreprises utilisent des logiciels pour trier les CV. Voici comment optimiser le vôtre pour ne jamais être filtré.</p>
+        <div class="card-footer">
+          <span class="read-time">Expérimentés</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="cv-etudiant.html" class="card" data-cat="profil">
+      <div class="card-top bg-profil">📚</div>
+      <div class="card-body">
+        <div class="article-meta"><span class="tag tag-profil">Par profil</span><span class="read-time">5 min</span></div>
+        <h3>Modèle CV étudiant : réussir son premier CV après la licence</h3>
+        <p>Fraîchement diplômé de l'INPHB, HEC Abidjan ou l'Université FHB ? Voici comment construire un CV solide dès la sortie des études.</p>
+        <div class="card-footer">
+          <span class="read-time">Étudiants</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="comment-faire-bon-cv.html" class="card" data-cat="guide">
+      <div class="card-top bg-guide">📄</div>
+      <div class="card-body">
+        <div class="article-meta"><span class="tag tag-guide">Guide</span><span class="read-time">8 min</span></div>
+        <h3>Comment faire un bon CV en 2025 : guide complet pas à pas</h3>
+        <p>De la mise en page à la formulation de vos expériences — tout ce qu'il faut savoir pour créer un CV qui attire les recruteurs.</p>
+        <div class="card-footer">
+          <span class="read-time">Tous niveaux</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- CTA bannière -->
+  <div class="cta-banner">
+    <h3>Prêt à créer votre CV professionnel ?</h3>
+    <p>Notre générateur IA crée un CV adapté au marché africain en moins de 5 minutes — gratuitement.</p>
+    <a href="../index.html">Créer mon CV gratuitement →</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 CVProAfrica — <a href="../confidentialite.html">Confidentialité</a> · <a href="../mention.html">Mentions légales</a> · <a href="../support.html">Support</a></p>
+</footer>
+
+<script>
+function filterArticles(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const featured = document.querySelector('.featured');
+  const cards = document.querySelectorAll('#articles-grid .card');
+
+  if (cat === 'tous') {
+    featured.style.display = '';
+    cards.forEach(c => c.style.display = '');
+    document.getElementById('articles-titre').textContent = 'Tous les articles';
+  } else {
+    featured.style.display = featured.dataset.cat === cat ? '' : 'none';
+    cards.forEach(c => {
+      c.style.display = c.dataset.cat === cat ? '' : 'none';
+    });
+    const labels = { local:'Géolocalisés', guide:'Guides pratiques', profil:'Par profil', ia:'IA & CV', conseils:'Conseils' };
+    document.getElementById('articles-titre').textContent = labels[cat] || 'Articles';
+  }
+}
+</script>
+</body>
+</html>
