@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3419081438463570"
+     crossorigin="anonymous"></script>
+  <title>CV avec l'IA : comment ça marche vraiment en 2026 ? | CVProAfrica</title>
+  <meta name="description" content="Comment l'intelligence artificielle génère un CV professionnel en quelques minutes. Explication simple, avantages, limites et guide pas à pas pour le marché africain."/>
+  <meta name="keywords" content="cv intelligence artificielle, cv ia comment ça marche, générer cv automatiquement, cv ia gratuit, créer cv avec ia afrique"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://cv-pro-africa.vercel.app/blog/cv-ia-comment-ca-marche.html"/>
+  <meta property="og:title" content="CV avec l'IA : comment ça marche vraiment en 2026 ?"/>
+  <meta property="og:description" content="Comment l'IA génère un CV professionnel en quelques minutes. Guide complet pour le marché africain."/>
+  <meta property="og:url" content="https://cvproafrica.com/blog/cv-ia-comment-ca-marche.html"/>
+  <meta property="og:type" content="article"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "CV avec l'IA : comment ça marche vraiment en 2025 ?",
+    "description": "Comment l'intelligence artificielle génère un CV professionnel en quelques minutes.",
+    "author": { "@type": "Organization", "name": "CVProAfrica" },
+    "publisher": { "@type": "Organization", "name": "CVProAfrica", "url": "https://cvproafrica.com" },
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-06-04",
+    "url": "https://cvproafrica.com/blog/cv-ia-comment-ca-marche.html",
+    "inLanguage": "fr"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Est-ce qu'un CV généré par IA est accepté par les recruteurs ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui, un CV généré par IA est tout à fait acceptable. Ce qui compte pour un recruteur, c'est la qualité du contenu et la présentation — pas la façon dont il a été produit. Un CV IA bien personnalisé est souvent meilleur qu'un CV Word mal structuré." }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps faut-il pour créer un CV avec l'IA ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Entre 3 et 10 minutes selon la richesse de votre parcours. L'IA génère la structure et le texte en quelques secondes — vous passez le reste du temps à vérifier et personnaliser." }
+      },
+      {
+        "@type": "Question",
+        "name": "L'IA peut-elle créer un CV sans aucune information de ma part ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Non. L'IA a besoin d'informations de base : votre nom, vos diplômes, vos expériences, vos compétences. Elle les met en forme de façon professionnelle, propose des formulations percutantes et corrige les fautes — mais elle ne peut pas inventer votre parcours." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:       #1a1a18;
+      --ink-2:     #4a4a44;
+      --ink-3:     #8a8a80;
+      --cream:     #faf8f3;
+      --cream-2:   #f2efe6;
+      --gold:      #c89a3a;
+      --green:     #2d6a4f;
+      --green-lt:  #d8ede3;
+      --coral:     #c0442a;
+      --coral-lt:  #fae8e3;
+      --blue:      #2d4da0;
+      --blue-lt:   #e8eeff;
+      --purple:    #5c3aa0;
+      --purple-lt: #f0ebff;
+      --amber-lt:  #fff8e8;
+      --teal:      #0f6e72;
+      --teal-lt:   #e0f4f4;
+      --border:    #e4e0d4;
+      --radius:    10px;
+      --content:   680px;
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); line-height: 1.7; }
+
+    nav.topnav { background: var(--ink); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links a { color: rgba(255,255,255,.6); font-size: .82rem; text-decoration: none; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { background: var(--gold); color: var(--ink); font-size: .8rem; font-weight: 600; padding: 8px 18px; border-radius: 6px; text-decoration: none; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    /* HERO — gradient tech IA */
+    .article-hero {
+      background: linear-gradient(135deg, #0f1a2e 0%, #1a3a5c 50%, #0f4a5c 100%);
+      padding: 3.5rem 2rem 3rem; position: relative; overflow: hidden;
+    }
+    .article-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(45,106,79,.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(92,58,160,.2) 0%, transparent 50%);
+    }
+    .hero-inner { max-width: var(--content); margin: 0 auto; position: relative; }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; margin-bottom: 1.2rem; flex-wrap: wrap; }
+    .breadcrumb a { color: rgba(255,255,255,.5); font-size: .75rem; text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { color: rgba(255,255,255,.25); font-size: .75rem; }
+    .hero-tag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; background: rgba(255,255,255,.12); color: #fff; margin-bottom: 1rem; }
+    .article-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; color: #fff; line-height: 1.25; margin-bottom: .9rem; }
+    .hero-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .hero-meta span { font-size: .78rem; color: rgba(255,255,255,.5); }
+    .hero-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,.25); }
+
+    .article-layout { max-width: 1040px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 1fr 280px; gap: 3rem; align-items: start; }
+    .article-content { min-width: 0; }
+
+    .intro { font-size: 1.05rem; color: var(--ink-2); border-left: 3px solid var(--teal); padding-left: 1.2rem; margin-bottom: 2rem; line-height: 1.7; }
+
+    .toc { background: var(--cream-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; }
+    .toc-title { font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: .8rem; }
+    .toc ol { padding-left: 1.1rem; }
+    .toc li { margin-bottom: .3rem; }
+    .toc a { font-size: .85rem; color: var(--teal); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    .article-content h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--ink); margin: 2.8rem 0 .9rem; padding-top: .5rem; border-top: 1px solid var(--border); }
+    .article-content h3 { font-size: 1.02rem; font-weight: 600; color: var(--ink); margin: 1.6rem 0 .5rem; }
+    .article-content p { font-size: .95rem; color: var(--ink-2); margin-bottom: 1rem; }
+    .article-content ul, .article-content ol { padding-left: 1.4rem; margin-bottom: 1rem; }
+    .article-content li { font-size: .92rem; color: var(--ink-2); margin-bottom: .4rem; }
+    .article-content strong { color: var(--ink); font-weight: 600; }
+
+    .tip-box { border-radius: var(--radius); padding: 1rem 1.2rem; margin: 1rem 0; font-size: .88rem; line-height: 1.6; }
+    .tip-box strong { display: block; margin-bottom: .3rem; font-size: .75rem; letter-spacing: .05em; text-transform: uppercase; }
+    .tip-info   { background: var(--blue-lt);   color: var(--blue);   border-left: 3px solid var(--blue); }
+    .tip-warn   { background: var(--amber-lt);  color: #7a5a00;       border-left: 3px solid var(--gold); }
+    .tip-good   { background: var(--green-lt);  color: var(--green);  border-left: 3px solid var(--green); }
+    .tip-purple { background: var(--purple-lt); color: var(--purple); border-left: 3px solid var(--purple); }
+    .tip-teal   { background: var(--teal-lt);   color: var(--teal);   border-left: 3px solid var(--teal); }
+
+    .cta-inline { background: var(--teal); border-radius: var(--radius); padding: 1.2rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
+    .cta-inline p { color: #fff; font-size: .88rem; font-weight: 500; margin: 0; }
+    .cta-inline p span { display: block; font-size: .78rem; color: rgba(255,255,255,.7); font-weight: 400; }
+    .cta-inline a { background: #fff; color: var(--teal); font-weight: 600; font-size: .82rem; padding: 9px 20px; border-radius: 7px; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: opacity .2s; }
+    .cta-inline a:hover { opacity: .88; }
+
+    /* COMMENT CA MARCHE — flow visuel */
+    .how-flow { margin: 1.5rem 0; }
+    .how-step { display: flex; gap: 1.2rem; margin-bottom: 1rem; align-items: flex-start; }
+    .how-num { width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .how-content { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.2rem; flex: 1; }
+    .how-content h4 { font-size: .9rem; font-weight: 600; color: var(--ink); margin-bottom: .3rem; }
+    .how-content p { font-size: .82rem; color: var(--ink-2); margin: 0; line-height: 1.55; }
+    .how-arrow { text-align: center; color: var(--ink-3); font-size: 1.2rem; margin: -.3rem 0 -.3rem 19px; }
+
+    /* AVANT/APRES IA */
+    .ia-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .ia-col { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .ia-col-head { padding: .8rem 1rem; font-size: .78rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
+    .ia-col.before .ia-col-head { background: var(--cream-2); color: var(--ink-3); }
+    .ia-col.after  .ia-col-head { background: var(--teal); color: #fff; }
+    .ia-col-body { padding: 1rem; background: #fff; font-size: .82rem; color: var(--ink-2); line-height: 1.6; }
+    .ia-col.after .ia-col-body { border-top: none; }
+
+    /* AVANTAGES/LIMITES */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0; }
+    .pros-card { background: var(--green-lt); border: 1px solid rgba(45,106,79,.2); border-radius: var(--radius); padding: 1.1rem; }
+    .cons-card { background: var(--amber-lt); border: 1px solid rgba(200,154,58,.3); border-radius: var(--radius); padding: 1.1rem; }
+    .pros-card h4 { font-size: .82rem; font-weight: 700; color: var(--green); margin-bottom: .7rem; letter-spacing: .04em; text-transform: uppercase; }
+    .cons-card h4 { font-size: .82rem; font-weight: 700; color: #7a5a00; margin-bottom: .7rem; letter-spacing: .04em; text-transform: uppercase; }
+    .pros-card ul, .cons-card ul { list-style: none; padding: 0; margin: 0; }
+    .pros-card li, .cons-card li { font-size: .82rem; padding: .28rem 0; display: flex; gap: .5rem; border-bottom: 1px solid rgba(0,0,0,.05); }
+    .pros-card li:last-child, .cons-card li:last-child { border-bottom: none; }
+    .pros-card li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+    .cons-card li::before { content: '!'; color: #7a5a00; font-weight: 700; flex-shrink: 0; }
+
+    /* COMPARAISON METHODES */
+    .methods-table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .84rem; }
+    .methods-table th { padding: 10px 12px; font-weight: 600; font-size: .76rem; text-transform: uppercase; letter-spacing: .04em; }
+    .methods-table th:first-child { background: var(--cream-2); color: var(--ink-3); text-align: left; }
+    .methods-table th:nth-child(2) { background: #e8e0f5; color: var(--purple); text-align: center; }
+    .methods-table th:nth-child(3) { background: var(--blue-lt); color: var(--blue); text-align: center; }
+    .methods-table th:nth-child(4) { background: var(--teal-lt); color: var(--teal); text-align: center; }
+    .methods-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; color: var(--ink-2); }
+    .methods-table td:not(:first-child) { text-align: center; }
+    .methods-table tr:last-child td { border-bottom: none; }
+    .methods-table tr:nth-child(even) td { background: var(--cream-2); }
+    .score-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+    .s-green { background: #5dcaa5; }
+    .s-orange { background: #ef9f27; }
+    .s-red { background: #e24b4b; }
+
+    /* GUIDE PAS A PAS */
+    .guide-steps { counter-reset: gstep; list-style: none; padding: 0; margin: 1.2rem 0; }
+    .guide-steps li { counter-increment: gstep; display: grid; grid-template-columns: 36px 1fr; gap: .9rem; margin-bottom: .9rem; align-items: start; }
+    .guide-steps li::before { content: counter(gstep); width: 36px; height: 36px; border-radius: 8px; background: var(--teal); color: #fff; font-weight: 700; font-size: .88rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .guide-steps .gs-title { font-size: .9rem; font-weight: 600; color: var(--ink); margin-bottom: .2rem; }
+    .guide-steps .gs-desc { font-size: .82rem; color: var(--ink-2); line-height: 1.55; }
+    .guide-steps .gs-tip { font-size: .78rem; color: var(--teal); margin-top: .3rem; font-style: italic; }
+
+    /* FAQ */
+    .faq { margin: 1rem 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: .6rem; overflow: hidden; }
+    .faq-q { padding: 1rem 1.1rem; font-size: .92rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fff; gap: .5rem; list-style: none; color: var(--ink); }
+    .faq-q::after { content: '+'; font-size: 1.2rem; color: var(--gold); flex-shrink: 0; }
+    details[open] .faq-q::after { content: '−'; }
+    .faq-a { padding: 0 1.1rem 1rem; font-size: .88rem; color: var(--ink-2); background: #fff; line-height: 1.65; }
+
+    .cta-final { background: var(--ink); border-radius: var(--radius); padding: 2.2rem; text-align: center; margin: 3rem 0 1rem; position: relative; overflow: hidden; }
+    .cta-final::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(200,154,58,.04) 20px, rgba(200,154,58,.04) 21px); }
+    .cta-final h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #fff; margin-bottom: .5rem; position: relative; }
+    .cta-final p { color: rgba(255,255,255,.6); font-size: .87rem; margin-bottom: 1.2rem; position: relative; }
+    .cta-final a { display: inline-block; background: var(--gold); color: var(--ink); font-weight: 600; font-size: .88rem; padding: 12px 28px; border-radius: 7px; text-decoration: none; position: relative; transition: opacity .2s; }
+    .cta-final a:hover { opacity: .88; }
+
+    .sidebar { position: sticky; top: 80px; }
+    .sidebar-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; margin-bottom: 1.2rem; }
+    .sidebar-card h4 { font-family: 'Playfair Display', serif; font-size: .95rem; font-weight: 700; margin-bottom: .9rem; color: var(--ink); }
+    .sidebar-cta { background: var(--teal); border-radius: var(--radius); padding: 1.3rem; text-align: center; }
+    .sidebar-cta p { color: rgba(255,255,255,.8); font-size: .8rem; margin-bottom: .9rem; }
+    .sidebar-cta a { display: block; background: #fff; color: var(--teal); font-weight: 600; font-size: .83rem; padding: 9px; border-radius: 6px; text-decoration: none; transition: opacity .2s; }
+    .sidebar-cta a:hover { opacity: .88; }
+    .related-list { list-style: none; padding: 0; }
+    .related-list li { margin-bottom: .5rem; border-bottom: 1px solid var(--border); padding-bottom: .5rem; }
+    .related-list li:last-child { border-bottom: none; margin-bottom: 0; }
+    .related-list a { font-size: .82rem; color: var(--teal); text-decoration: none; line-height: 1.4; display: block; }
+    .related-list a:hover { text-decoration: underline; }
+    .stat-mini { background: var(--ink); border-radius: var(--radius); padding: 1rem; margin-bottom: 1.2rem; }
+    .stat-mini .s-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .stat-mini .s-label { font-size: .75rem; color: rgba(255,255,255,.55); margin-top: .2rem; }
+    .stat-mini .s-row { display: flex; gap: 1rem; justify-content: space-around; }
+
+    footer { background: var(--ink); color: rgba(255,255,255,.45); text-align: center; padding: 2rem; font-size: .76rem; margin-top: 2rem; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 760px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; margin-top: 2rem; }
+      .ia-compare, .two-col { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 480px) {
+      .article-layout { padding: 1.5rem 1rem; }
+      .cta-inline { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="../index.html" class="nav-logo">CV<span>Pro</span>Africa</a>
+  <div class="nav-links">
+    <a href="index.html">Blog</a>
+    <a href="../confidentialite.html">Confidentialité</a>
+    <a href="../support.html">Support</a>
+  </div>
+  <a href="../index.html" class="nav-cta">Créer mon CV ↗</a>
+</nav>
+
+<header class="article-hero">
+  <div class="hero-inner">
+    <nav class="breadcrumb" aria-label="Fil d'ariane">
+      <a href="../index.html">Accueil</a>
+      <span>›</span>
+      <a href="index.html">Blog</a>
+      <span>›</span>
+      <span style="color:rgba(255,255,255,.8)">CV & Intelligence Artificielle</span>
+    </nav>
+    <div class="hero-tag">🤖 IA & CV</div>
+    <h1>CV avec l'IA : comment ça marche vraiment en 2025 ?</h1>
+    <div class="hero-meta">
+      <span>Par CVProAfrica</span>
+      <div class="dot"></div>
+      <span>Juin 2025</span>
+      <div class="dot"></div>
+      <span>5 min de lecture</span>
+      <div class="dot"></div>
+      <span>Tous niveaux</span>
+    </div>
+  </div>
+</header>
+
+<div class="article-layout">
+  <article class="article-content">
+
+    <p class="intro">
+      Vous avez entendu parler des générateurs de CV par intelligence artificielle —
+      mais vous vous demandez concrètement comment ça fonctionne, si c'est vraiment fiable,
+      et si les recruteurs acceptent ce type de CV.
+      Dans cet article, on vous explique tout simplement, sans jargon technique.
+    </p>
+
+    <div class="cta-inline">
+      <p>Essayez par vous-même — créez votre CV avec l'IA
+        <span>Gratuit, sans inscription — résultat en 5 minutes</span>
+      </p>
+      <a href="../index.html">Créer mon CV →</a>
+    </div>
+
+    <nav class="toc" aria-label="Sommaire">
+      <div class="toc-title">Sommaire</div>
+      <ol>
+        <li><a href="#c-est-quoi">C'est quoi un générateur de CV par IA ?</a></li>
+        <li><a href="#comment-ca-marche">Comment ça marche concrètement ?</a></li>
+        <li><a href="#avant-apres">Avant / après : ce que l'IA transforme</a></li>
+        <li><a href="#avantages-limites">Avantages et limites</a></li>
+        <li><a href="#vs-word">IA vs Word vs Canva : que choisir ?</a></li>
+        <li><a href="#guide">Guide pas à pas pour créer son CV avec CVProAfrica</a></li>
+        <li><a href="#recruteurs">Les recruteurs acceptent-ils les CV générés par IA ?</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <!-- Section 1 -->
+    <h2 id="c-est-quoi">1. C'est quoi un générateur de CV par IA ?</h2>
+    <p>
+      Un générateur de CV par intelligence artificielle est un outil en ligne qui
+      <strong>crée automatiquement un CV professionnel</strong> à partir des informations que vous lui fournissez.
+      Vous entrez votre parcours — diplômes, expériences, compétences — et l'IA se charge du reste :
+      mise en page, formulations, structure, correction orthographique et export PDF.
+    </p>
+    <p>
+      Concrètement, l'IA utilisée est un <strong>grand modèle de langage</strong> (comme ceux qui propulsent
+      les assistants intelligents) entraîné sur des millions de CV professionnels.
+      Il connaît les formules qui fonctionnent, les verbes d'action qui convainquent,
+      et les structures que les recruteurs lisent facilement.
+    </p>
+
+    <div class="tip-box tip-teal">
+      <strong>En résumé simple</strong>
+      Vous fournissez vos informations brutes → l'IA les transforme en un document professionnel, bien rédigé,
+      bien présenté et sans fautes → vous téléchargez le PDF prêt à envoyer.
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="comment-ca-marche">2. Comment ça marche concrètement ?</h2>
+    <p>Le processus se déroule en 5 étapes automatiques, invisibles pour vous :</p>
+
+    <div class="how-flow">
+      <div class="how-step">
+        <div class="how-num">1</div>
+        <div class="how-content">
+          <h4>Vous saisissez vos informations</h4>
+          <p>Nom, diplômes, expériences, compétences, langues — des champs simples à remplir comme un formulaire.</p>
+        </div>
+      </div>
+      <div class="how-arrow">↓</div>
+      <div class="how-step">
+        <div class="how-num">2</div>
+        <div class="how-content">
+          <h4>L'IA analyse et enrichit le contenu</h4>
+          <p>Elle reformule vos descriptions en utilisant des verbes d'action percutants, corrige les fautes et adapte le ton à votre secteur.</p>
+        </div>
+      </div>
+      <div class="how-arrow">↓</div>
+      <div class="how-step">
+        <div class="how-num">3</div>
+        <div class="how-content">
+          <h4>Elle choisit la structure optimale</h4>
+          <p>Selon votre profil (junior, senior, reconversion), elle organise les sections dans l'ordre le plus efficace pour un recruteur.</p>
+        </div>
+      </div>
+      <div class="how-arrow">↓</div>
+      <div class="how-step">
+        <div class="how-num">4</div>
+        <div class="how-content">
+          <h4>Elle génère la mise en page</h4>
+          <p>Un design sobre et professionnel, compatible ATS, lisible sur écran et imprimé — sans que vous touchiez à un seul réglage.</p>
+        </div>
+      </div>
+      <div class="how-arrow">↓</div>
+      <div class="how-step">
+        <div class="how-num">5</div>
+        <div class="how-content">
+          <h4>Vous téléchargez votre CV en PDF</h4>
+          <p>Le fichier est prêt à envoyer à des recruteurs, à joindre à une candidature en ligne ou à imprimer.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <h2 id="avant-apres">3. Avant / après : ce que l'IA transforme</h2>
+    <p>Voici la différence concrète entre ce que vous écrivez et ce que l'IA produit :</p>
+
+    <div class="ia-compare">
+      <div class="ia-col before">
+        <div class="ia-col-head">Ce que vous tapez</div>
+        <div class="ia-col-body">
+          <p>"J'ai travaillé dans une banque pendant 2 ans. Je faisais le service client et je gérais les comptes des clients. J'aidais aussi à la caisse."</p>
+        </div>
+      </div>
+      <div class="ia-col after">
+        <div class="ia-col-head">✓ Ce que l'IA produit</div>
+        <div class="ia-col-body">
+          <p>
+            <strong>Chargé de relation clientèle — Ecobank CI, Abidjan</strong><br/>
+            <em>2022 – 2024</em><br/><br/>
+            • Géré un portefeuille de 200+ clients particuliers et professionnels<br/>
+            • Assuré le traitement des opérations de caisse avec un taux d'erreur inférieur à 0,1%<br/>
+            • Contribué à l'atteinte des objectifs de satisfaction client (score NPS : 87/100)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ia-compare">
+      <div class="ia-col before">
+        <div class="ia-col-head">Ce que vous tapez</div>
+        <div class="ia-col-body">
+          <p>"Je suis bon en Excel et je connais un peu le marketing digital. J'ai fait une formation en ligne aussi."</p>
+        </div>
+      </div>
+      <div class="ia-col after">
+        <div class="ia-col-head">✓ Ce que l'IA produit</div>
+        <div class="ia-col-body">
+          <p>
+            <strong>Compétences</strong><br/>
+            Excel avancé (tableaux croisés dynamiques, macros VBA) · Marketing digital (SEO, Google Ads, Meta Business Suite) · Certification Google Digital Marketing (2024)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box tip-good">
+      <strong>Ce que vous voyez clairement</strong>
+      L'IA ne fait pas que mettre en forme — elle <strong>valorise</strong> votre parcours,
+      trouve les bons titres de poste, quantifie vos réalisations quand c'est possible
+      et utilise le vocabulaire attendu par les recruteurs de votre secteur.
+    </div>
+
+    <!-- Section 4 -->
+    <h2 id="avantages-limites">4. Avantages et limites honnêtes</h2>
+
+    <div class="two-col">
+      <div class="pros-card">
+        <h4>✓ Ce que l'IA fait très bien</h4>
+        <ul>
+          <li>Rédige vite — 5 min au lieu de 2h</li>
+          <li>Zéro faute d'orthographe</li>
+          <li>Mise en page professionnelle garantie</li>
+          <li>Compatible ATS automatiquement</li>
+          <li>Formulations percutantes et sectorielles</li>
+          <li>Structure optimisée selon le profil</li>
+          <li>Export PDF parfait dès la première fois</li>
+        </ul>
+      </div>
+      <div class="cons-card">
+        <h4>! Ce que l'IA ne peut pas faire</h4>
+        <ul>
+          <li>Inventer votre parcours — elle travaille avec vos données</li>
+          <li>Remplacer la personnalisation pour chaque offre</li>
+          <li>Connaître des détails internes de votre poste</li>
+          <li>Choisir à votre place ce que vous voulez mettre en avant</li>
+          <li>Ajouter votre photo automatiquement</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Section 5 -->
+    <h2 id="vs-word">5. IA vs Word vs Canva : que choisir ?</h2>
+    <p>Voici une comparaison honnête des trois méthodes :</p>
+
+    <table class="methods-table">
+      <thead>
+        <tr>
+          <th>Critère</th>
+          <th>Microsoft Word</th>
+          <th>Canva</th>
+          <th>CVProAfrica IA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Temps nécessaire</strong></td>
+          <td>1 à 3 heures</td>
+          <td>30 min à 1h</td>
+          <td>5 à 10 minutes</td>
+        </tr>
+        <tr>
+          <td><strong>Qualité du texte</strong></td>
+          <td>Dépend de vous</td>
+          <td>Dépend de vous</td>
+          <td>Optimisé par l'IA</td>
+        </tr>
+        <tr>
+          <td><strong>Fautes d'orthographe</strong></td>
+          <td><span class="score-dot s-orange"></span> Correcteur basique</td>
+          <td><span class="score-dot s-red"></span> Pas de correcteur</td>
+          <td><span class="score-dot s-green"></span> Correction automatique</td>
+        </tr>
+        <tr>
+          <td><strong>Compatible ATS</strong></td>
+          <td><span class="score-dot s-orange"></span> Si bien formaté</td>
+          <td><span class="score-dot s-red"></span> Souvent non</td>
+          <td><span class="score-dot s-green"></span> Toujours oui</td>
+        </tr>
+        <tr>
+          <td><strong>Design professionnel</strong></td>
+          <td><span class="score-dot s-orange"></span> Difficile sans compétences</td>
+          <td><span class="score-dot s-green"></span> Beau mais non-ATS</td>
+          <td><span class="score-dot s-green"></span> Beau ET ATS-compatible</td>
+        </tr>
+        <tr>
+          <td><strong>Gratuit</strong></td>
+          <td><span class="score-dot s-orange"></span> Payant (abonnement)</td>
+          <td><span class="score-dot s-orange"></span> Gratuit limité</td>
+          <td><span class="score-dot s-green"></span> Gratuit</td>
+        </tr>
+        <tr>
+          <td><strong>Adapté au marché africain</strong></td>
+          <td><span class="score-dot s-orange"></span> À adapter manuellement</td>
+          <td><span class="score-dot s-red"></span> Non</td>
+          <td><span class="score-dot s-green"></span> Oui, nativement</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tip-box tip-info">
+      <strong>Notre recommandation</strong>
+      Utilisez CVProAfrica pour créer la base de votre CV en 5 minutes,
+      puis personnalisez légèrement pour chaque offre. C'est le meilleur équilibre
+      entre rapidité, qualité et efficacité.
+    </div>
+
+    <!-- Section 6 -->
+    <h2 id="guide">6. Guide pas à pas : créer son CV avec CVProAfrica</h2>
+
+    <ol class="guide-steps">
+      <li>
+        <div>
+          <div class="gs-title">Accédez au générateur</div>
+          <div class="gs-desc">Allez sur la page d'accueil de CVProAfrica. Pas besoin de créer un compte pour commencer.</div>
+          <div class="gs-tip">→ Disponible depuis votre téléphone ou ordinateur</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="gs-title">Renseignez vos informations personnelles</div>
+          <div class="gs-desc">Nom, prénom, email, téléphone, ville. Ajoutez votre photo professionnelle si vous en avez une.</div>
+          <div class="gs-tip">→ Ces informations restent privées et ne sont jamais partagées</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="gs-title">Décrivez vos expériences et formations</div>
+          <div class="gs-desc">Entrez vos postes, entreprises, dates et une description simple de vos missions. Pas besoin de soigner le style — l'IA s'en charge.</div>
+          <div class="gs-tip">→ Même un stage ou un job étudiant mérite d'être mentionné</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="gs-title">Ajoutez vos compétences et langues</div>
+          <div class="gs-desc">Listez vos logiciels, outils, certifications et langues parlées. L'IA les organise et les formule professionnellement.</div>
+          <div class="gs-tip">→ Pensez à mentionner les outils spécifiques à votre secteur (SAGE, SAP, Google Analytics…)</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="gs-title">Choisissez votre modèle</div>
+          <div class="gs-desc">Sélectionnez un design adapté à votre secteur — sobre pour la finance et les ONG, plus moderne pour le digital et les startups.</div>
+          <div class="gs-tip">→ Tous les modèles sont compatibles ATS</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="gs-title">Générez et téléchargez</div>
+          <div class="gs-desc">Cliquez sur "Générer mon CV". L'IA produit votre document en quelques secondes. Vérifiez, ajustez si besoin, et téléchargez en PDF.</div>
+          <div class="gs-tip">→ Le PDF est prêt à envoyer à des recruteurs immédiatement</div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="cta-inline">
+      <p>Essayez maintenant — c'est gratuit
+        <span>Aucune carte bancaire · Aucune inscription obligatoire</span>
+      </p>
+      <a href="../index.html">Créer mon CV →</a>
+    </div>
+
+    <!-- Section 7 -->
+    <h2 id="recruteurs">7. Les recruteurs acceptent-ils les CV générés par IA ?</h2>
+    <p>
+      C'est la question que tout le monde se pose. La réponse courte : <strong>oui, absolument.</strong>
+    </p>
+    <p>
+      Ce qui compte pour un recruteur, c'est la <strong>qualité du contenu et la clarté de la présentation</strong> —
+      pas la façon dont le CV a été produit. Un recruteur à Abidjan, Dakar ou Douala
+      ne se demande pas si vous avez utilisé Word, Canva ou une IA.
+      Il se demande si votre profil correspond au poste.
+    </p>
+    <p>
+      En réalité, un CV généré par IA et bien personnalisé est souvent
+      <strong>meilleur qu'un CV Word mal structuré</strong> :
+      il est mieux organisé, mieux rédigé, sans fautes, et compatible avec les logiciels ATS
+      utilisés par les grandes entreprises.
+    </p>
+
+    <div class="tip-box tip-warn">
+      <strong>La seule chose à éviter</strong>
+      Envoyer un CV IA sans le personnaliser du tout — avec des formules trop génériques
+      ou des informations inexactes. Relisez toujours votre CV avant de l'envoyer
+      et vérifiez que chaque information est vraie et pertinente pour le poste visé.
+    </div>
+
+    <!-- FAQ -->
+    <h2 id="faq">FAQ — Questions fréquentes</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary class="faq-q">Est-ce qu'un CV généré par IA est accepté par les recruteurs ?</summary>
+        <div class="faq-a">Oui, un CV généré par IA est tout à fait acceptable. Ce qui compte pour un recruteur, c'est la qualité du contenu et la présentation — pas la façon dont il a été produit. Un CV IA bien personnalisé est souvent meilleur qu'un CV Word mal structuré. Les recruteurs africains ne font pas la différence et ne cherchent pas à la faire.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Combien de temps faut-il pour créer un CV avec l'IA ?</summary>
+        <div class="faq-a">Entre 5 et 10 minutes selon la richesse de votre parcours. L'IA génère la structure et le texte en quelques secondes — vous passez le reste du temps à renseigner vos informations, vérifier le résultat et télécharger le PDF. C'est incomparablement plus rapide qu'un CV sur Word.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">L'IA peut-elle créer un CV sans aucune information de ma part ?</summary>
+        <div class="faq-a">Non. L'IA a besoin d'informations de base : votre nom, vos diplômes, vos expériences, vos compétences. Elle met tout cela en forme de façon professionnelle, propose des formulations percutantes et corrige les fautes — mais elle ne peut pas inventer votre parcours. C'est vous qui fournissez la matière, elle qui la transforme.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Mes informations sont-elles sécurisées ?</summary>
+        <div class="faq-a">CVProAfrica ne stocke pas vos données personnelles au-delà de la session de création. Vos informations sont utilisées uniquement pour générer votre CV et ne sont jamais partagées avec des tiers. Consultez notre politique de confidentialité pour plus de détails.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Peut-on modifier le CV après génération ?</summary>
+        <div class="faq-a">Oui. Après la génération, vous pouvez modifier, ajuster ou compléter n'importe quelle section avant de télécharger le PDF final. C'est recommandé pour personnaliser le CV selon chaque offre d'emploi.</div>
+      </details>
+    </div>
+
+    <div class="cta-final">
+      <h3>L'IA au service de votre carrière</h3>
+      <p>Créez en 5 minutes un CV professionnel, sans fautes, compatible ATS et adapté au marché africain — gratuitement.</p>
+      <a href="../index.html">Créer mon CV avec l'IA →</a>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+
+    <div class="stat-mini">
+      <div class="s-row">
+        <div>
+          <div class="s-num">5min</div>
+          <div class="s-label">pour créer un CV</div>
+        </div>
+        <div>
+          <div class="s-num">0€</div>
+          <div class="s-label">coût total</div>
+        </div>
+        <div>
+          <div class="s-num">100%</div>
+          <div class="s-label">ATS compatible</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <p>Créez votre CV professionnel avec l'IA maintenant</p>
+      <a href="../index.html">Commencer gratuitement →</a>
+    </div>
+
+    <div class="sidebar-card" style="margin-top:1.2rem">
+      <h4>Articles liés</h4>
+      <ul class="related-list">
+        <li><a href="comment-faire-cv-cote-divoire.html">CV en Côte d'Ivoire : guide complet</a></li>
+        <li><a href="cv-compatible-ats.html">CV compatible ATS : comment l'optimiser</a></li>
+        <li><a href="erreurs-cv-a-eviter.html">Les 7 erreurs qui font rejeter un CV</a></li>
+        <li><a href="cv-sans-experience.html">CV sans expérience : guide complet</a></li>
+        <li><a href="lettre-motivation-ia.html">Lettre de motivation par IA</a></li>
+        <li><a href="cv-senegal.html">Faire son CV au Sénégal</a></li>
+      </ul>
+    </div>
+
+  </aside>
+</div>
+
+<footer>
+  <p>© 2025 CVProAfrica — <a href="../confidentialite.html">Confidentialité</a> · <a href="../mention.html">Mentions légales</a> · <a href="../support.html">Support</a> · <a href="index.html">Blog</a></p>
+</footer>
+
+</body>
+</html>
