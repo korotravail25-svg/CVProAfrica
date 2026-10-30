@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <link rel="icon" href="/logo-cp.svg" type="image/svg+xml" />
+<meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CVPro Africa – Créez votre CV professionnel en 2 minutes</title>
   <meta name="description" content="Générez un CV professionnel gratuit en français grâce à l'IA. Idéal pour trouver un emploi en Côte d'Ivoire, Sénégal, Cameroun, Maroc et toute l'Afrique." />
@@ -66,6 +67,15 @@
       text-decoration: none;
     }
     .logo span { color: var(--gold); }
+    .logo { display: inline-flex; align-items: center; gap: 10px; }
+    .logo-sub { font-style: normal; }
+    .logo-mark { width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0; }
+    @media (max-width: 480px) {
+      .logo { font-size: 17px; gap: 8px; white-space: nowrap; }
+      .logo-mark { width: 30px; height: 30px; border-radius: 7px; }
+      .logo-sub { display: none; }
+      .btn-nav { padding: 8px 12px; font-size: 12px; }
+    }
     .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color .2s; }
     .nav-links a:hover { color: var(--gold); }
@@ -594,7 +604,7 @@
 
 <!-- ===== HEADER ===== -->
 <header>
-  <a href="#" class="logo">CV<span>Pro</span> Africa</a>
+  <a href="#" class="logo"><img src="/logo-cp.svg" alt="" width="36" height="36" class="logo-mark" />CV<span>Pro</span><i class="logo-sub"> Africa</i></a>
   <ul class="nav-links">
     <li><a href="#generator">Créer un CV</a></li>
     <li><a href="mentions-legales.html">Mentions légales</a></li>
